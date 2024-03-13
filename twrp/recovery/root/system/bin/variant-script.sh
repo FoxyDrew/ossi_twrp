@@ -15,7 +15,7 @@ case $region in
             resetprop ro.product.product.device "OP5973L1"
             resetprop ro.product.system_ext.device "OP5973L1"
             resetprop ro.product.vendor.device "OP5973L1"
-            resetprop ro.product.product.model "CPH2451"
+            resetprop ro.product.product.model "CPH2551"
             resetprop ro.product.model "CPH2551"
             resetprop ro.product.system.model "CPH2551"
             resetprop ro.product.system_ext.model "CPH2551"
