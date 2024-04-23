@@ -29,19 +29,18 @@
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := ossi
 
+# Vibrator
+TARGET_RECOVERY_DEVICE_MODULES += libexpat android.hardware.vibrator-V2-ndk
+RECOVERY_LIBRARY_SOURCE_FILES += \
+     $(TARGET_OUT_SHARED_LIBRARIES)/libexpat.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk.so
+
 # TWRP specific build flags
 TW_FRAMERATE := 120
-
-# Vibrator
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
 RECOVERY_TOUCHSCREEN_SWAP_XY := true
 RECOVERY_TOUCHSCREEN_FLIP_Y := true
 TW_NO_SCREEN_TIMEOUT := true
 TW_NO_SCREEN_BLANK := true
-
-
-TARGET_RECOVERY_DEVICE_MODULES += libexpat android.hardware.vibrator-V2-ndk
-RECOVERY_LIBRARY_SOURCE_FILES += \
-     $(TARGET_OUT_SHARED_LIBRARIES)/libexpat.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk.so
+TW_MAX_BRIGHTNESS := 1024
